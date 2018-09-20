@@ -1,0 +1,14 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source: 
+    repository: java 
+    tag: openjdk-8
+
+inputs:
+- name: spring-boot-repository
+
+run:
+  path: spring-boot-repository/ci/build.sh

@@ -1,0 +1,15 @@
+---
+resources:
+- name: spring-boot-repository
+  type: git
+  source:
+    uri: https://github.com/modestukasai/concourse-ci-spring-boot
+    branch: master
+
+jobs:
+- name: spring-boot-pipeline
+  public: true
+  plan:
+  - get: spring-boot-repository
+  - task: build-project
+    file: spring-boot-repository/ci/task_build_pipeline.yml
