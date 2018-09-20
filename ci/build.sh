@@ -1,9 +1,5 @@
 #!/bin/bash
 
-pwd
-
-cd ..
-
-pwd
+cd spring-boot-repository
 
 ./gradlew --no-daemon build
